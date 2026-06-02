@@ -36,7 +36,7 @@ Luồng đăng nhập Cognito dùng Authorization code grant với PKCE, nên Ap
 
 Xem hướng dẫn chi tiết tại `docs/WEEK2_AWS_DEPLOYMENT.md`.
 
-## Thông tin Gia Tuấn cần nhận
+## Thông tin Frontend cần nhận
 
 - Region thống nhất của nhóm.
 - API Invoke URL: `https://<api-id>.execute-api.<region>.amazonaws.com/prod`.
@@ -47,8 +47,7 @@ Xem hướng dẫn chi tiết tại `docs/WEEK2_AWS_DEPLOYMENT.md`.
 
 Xem `docs/BACKEND_HANDOFF.md`.
 
-## Bằng chứng Gia Tuấn phụ trách
-
+## Frontend phụ trách
 - `SE-1`: S3 Block Public Access bật đủ bốn tùy chọn.
 - `SE-2`: S3 URL trực tiếp trả `403 Forbidden` hoặc `AccessDenied`.
 - `SE-3`: CloudFront URL trả `200 OK` và web chạy được.
