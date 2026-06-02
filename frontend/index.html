@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css?v=20260602-pkce" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Cloud Project 2</p>
+        <h1>Task Manager</h1>
+      </div>
+      <nav class="auth-actions" aria-label="Authentication">
+        <button id="loginBtn" type="button">Login</button>
+        <button id="signupBtn" type="button">Sign Up</button>
+        <button id="logoutBtn" type="button" class="secondary" hidden>Logout</button>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="panel task-editor" aria-labelledby="taskFormTitle">
+        <div class="section-heading">
+          <h2 id="taskFormTitle">Tạo task</h2>
+          <button id="cancelEditBtn" type="button" class="link-button" hidden>Hủy sửa</button>
+        </div>
+
+        <form id="taskForm">
+          <label>
+            Tiêu đề
+            <input id="titleInput" name="title" type="text" required maxlength="120" />
+          </label>
+
+          <label>
+            Mô tả
+            <textarea id="descriptionInput" name="description" rows="4"></textarea>
+          </label>
+
+          <div class="form-grid">
+            <label>
+              Ưu tiên
+              <select id="priorityInput" name="priority" required>
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+
+            <label>
+              Hạn
+              <input id="dueDateInput" name="dueDate" type="date" required />
+            </label>
+
+            <label>
+              Trạng thái
+              <select id="statusInput" name="status" required>
+                <option value="pending">Pending</option>
+                <option value="done">Done</option>
+              </select>
+            </label>
+          </div>
+
+          <button id="submitTaskBtn" type="submit">Tạo task</button>
+        </form>
+      </section>
+
+      <section class="panel task-list-panel" aria-labelledby="taskListTitle">
+        <div class="section-heading list-heading">
+          <div>
+            <h2 id="taskListTitle">Danh sách task</h2>
+            <p id="sessionStatus" class="muted">Đang chạy bằng dữ liệu mock local.</p>
+          </div>
+          <button id="refreshBtn" type="button" class="secondary">Refresh</button>
+        </div>
+
+        <div class="filters" aria-label="Task filters">
+          <label>
+            Lọc ưu tiên
+            <select id="priorityFilter">
+              <option value="">Tất cả</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+
+          <label>
+            Lọc hạn
+            <input id="dueDateFilter" type="date" />
+          </label>
+
+          <button id="clearFiltersBtn" type="button" class="secondary">Xóa lọc</button>
+        </div>
+
+        <p id="messageBox" class="message" role="status" aria-live="polite"></p>
+        <div id="taskList" class="task-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js?v=20260602-pkce"></script>
+  </body>
+</html>

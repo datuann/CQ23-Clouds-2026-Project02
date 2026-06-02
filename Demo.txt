@@ -1,0 +1,8 @@
+Demo video link:
+
+Backup scenario:
+- Open CloudFront URL.
+- Login with Cognito user1 and create/update/delete a task.
+- Login with Cognito user2 and show user isolation.
+- Show S3 direct URL returns 403.
+- Show CloudFront URL returns 200.

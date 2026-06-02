@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+
+# Local/runtime artifacts
+*.log
+.env
+.env.*
+node_modules/
+dist/
+build/
+
+# Do not commit temporary archives unless they are final submission files.
+*.zip
+
+# Python helper cache if local scripts are added later.
+__pycache__/
+*.py[cod]
