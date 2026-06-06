@@ -5,8 +5,8 @@ const CONFIG = {
   cognitoDomain: "https://ap-southeast-1kg2xh3fup.auth.ap-southeast-1.amazoncognito.com",
   redirectUri: "https://d2atra32tlg2yg.cloudfront.net",
   signOutUri: "https://d2atra32tlg2yg.cloudfront.net",
-  apiBaseUrl: "",
-  useMockData: true
+  apiBaseUrl: "https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod",
+  useMockData: false
 };
 
 const STORAGE_KEYS = {

@@ -26,9 +26,9 @@
 
 ## Tuần 3 - Test và bằng chứng
 
-- [ ] Test user1 tạo/sửa/xóa task.
+- [x] Test user1 tạo/sửa/xóa task.
 - [ ] Test user2 không thấy task của user1.
-- [ ] Test filter priority/dueDate.
+- [x] Test filter priority/dueDate.
 - [x] Chụp `SE-1`, `SE-2`, `SE-3`, `SE-4`.
 - [x] Chụp `CO-1`, `FE-1`, `FE-2`, `FE-3`.
 - [ ] Gửi CloudFront domain và User Pool ID cho thành viên backend.

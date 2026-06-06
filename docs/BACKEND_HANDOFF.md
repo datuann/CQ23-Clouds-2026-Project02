@@ -36,14 +36,15 @@ Authorization: <id_token>
 ## Frontend cần nhận từ backend
 
 ```text
-API Invoke URL = https://<api-id>.execute-api.ap-southeast-1.amazonaws.com/prod
+API Invoke URL = https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod
+TABLE_NAME = TasksTable
 Endpoints = GET /tasks, POST /tasks, PUT /tasks/{id}, DELETE /tasks/{id}
 ```
 
 Sau khi nhận API Invoke URL, cập nhật `frontend/app.js`:
 
 ```javascript
-apiBaseUrl: "https://<api-id>.execute-api.ap-southeast-1.amazonaws.com/prod",
+apiBaseUrl: "https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod",
 useMockData: false
 ```
 

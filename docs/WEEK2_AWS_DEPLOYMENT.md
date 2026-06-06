@@ -8,7 +8,7 @@ Tài liệu này dùng cho phần Gia Tuấn phụ trách: Cognito, frontend con
 
 ```text
 Region = ap-southeast-1
-API Invoke URL = https://<api-id>.execute-api.<region>.amazonaws.com/prod
+API Invoke URL = https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod
 CloudFront URL = https://d2atra32tlg2yg.cloudfront.net
 User Pool ID = ap-southeast-1_kG2xh3fUP
 App Client ID = 444s4t2ma8qendcc0ool3fp9p7
@@ -26,7 +26,7 @@ CloudFront URL = ...
 Nhận từ backend:
 
 ```text
-API Invoke URL = ...
+API Invoke URL = https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod
 Endpoints = GET /tasks, POST /tasks, PUT /tasks/{id}, DELETE /tasks/{id}
 ```
 
@@ -86,7 +86,7 @@ const CONFIG = {
   cognitoDomain: "https://your-domain.auth.ap-southeast-1.amazoncognito.com",
   redirectUri: "https://<distribution-id>.cloudfront.net/",
   signOutUri: "https://<distribution-id>.cloudfront.net/",
-  apiBaseUrl: "https://<api-id>.execute-api.ap-southeast-1.amazonaws.com/prod",
+  apiBaseUrl: "https://nbht4903s6.execute-api.ap-southeast-1.amazonaws.com/prod",
   useMockData: false
 };
 ```
