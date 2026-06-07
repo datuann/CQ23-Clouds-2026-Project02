@@ -12,6 +12,9 @@ build/
 # Do not commit temporary archives unless they are final submission files.
 *.zip
 
+# Local planning/handoff notes, not part of the final required source package.
+docs/
+
 # Python helper cache if local scripts are added later.
 __pycache__/
 *.py[cod]
