@@ -40,7 +40,6 @@ Cấu trúc bên trong:
 │   ├── DELETE/
 │   ├── GET/
 │   └── UPDATE/
-├── docs/
 ├── screenshots/
 ├── README.md
 └── Demo.txt
@@ -60,8 +59,10 @@ Chức năng:
 - Authorization code grant với PKCE, không dùng client secret.
 - Gửi JWT token trong header `Authorization` khi gọi API.
 - CRUD task qua API Gateway.
-- Lọc task theo `priority` và `dueDate`.
-- Responsive cơ bản.
+- Dashboard task với thống kê tổng số task, task hoàn thành, task pending và task quá hạn.
+- Lọc task theo `priority` và thời hạn.
+- Tìm kiếm, sắp xếp task và xem lịch calendar.
+- Responsive cơ bản cho laptop và màn hình nhỏ.
 
 ### Backend
 
@@ -132,7 +133,25 @@ FE-2.png  Tạo/sửa/xóa task thành công
 FE-3.png  Lọc task theo priority/dueDate
 ```
 
-Các bằng chứng backend/network/IAM/monitoring/cost do các thành viên phụ trách tương ứng bổ sung vào báo cáo.
+Backend, networking, IAM, Cognito Authorizer và monitoring:
+
+```text
+CO-2.png  API Gateway Cognito Authorizer được cấu hình
+CO-3.png  API không có token trả 401 Unauthorized
+CO-4.png  API có token hợp lệ trả dữ liệu thành công
+NE-1.png  VPC Endpoint cho DynamoDB
+NE-2.png  Lambda có VpcConfig
+NE-3.png  Route Table có endpoint route
+NE-4.png  Không có NAT Gateway
+NE-5.png  CloudWatch log Lambda gọi DynamoDB thành công
+IM-1.png  IAM roles riêng biệt
+IM-2.png  IAM policy dùng ARN resource cụ thể
+IM-3.png  Lambda gắn với role đúng
+CW-1-Dashboard.png  CloudWatch Dashboard
+CW-2-Alarms.png     CloudWatch Alarms
+```
+
+Các ảnh này có thể được đưa trực tiếp vào báo cáo PDF hoặc nộp kèm trong thư mục `screenshots/`.
 
 ## Demo
 
@@ -150,14 +169,6 @@ Video nên thể hiện:
 - Lọc task.
 - Đăng nhập user khác và chứng minh không thấy task của user cũ.
 - S3 direct URL trả 403.
-
-## Tài liệu hỗ trợ
-
-```text
-docs/BACKEND_HANDOFF.md
-docs/GIA_TUAN_CHECKLIST.md
-docs/WEEK2_AWS_DEPLOYMENT.md
-```
 
 ## Lưu ý bảo mật
 
